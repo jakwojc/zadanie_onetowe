@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+int i,d;
+char t[]="ala ma kota";
+d=1;
+for (i=0;i<11;i++){
+if(d==1){
+if ((int)t[i]>=65 && (int)t[i]<=90){
+printf("%c",t[i]);
+d--;
+}
+if ((int)t[i]>=97 && (int)t[i]<=122){
+printf("%c",(t[i]-32));
+d--;
+}
+if ((int)t[i]==32) {
+printf(" ");
+}
+}
+else {
+if ((int)t[i]>=65 && (int)t[i]<=90){
+printf("%c",(t[i]+32));
+d++;
+}
+if ((int)t[i]>=97 && (int)t[i]<=122){
+printf("%c",t[i]);
+d++;
+}
+if ((int)t[i]==32) {
+printf(" ");
+}
+}
+
+}
+printf("\n");
+return 0;
+}
